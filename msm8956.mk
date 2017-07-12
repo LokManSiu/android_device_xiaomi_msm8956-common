@@ -151,11 +151,20 @@ PRODUCT_PACKAGES += \
     libgenlock \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
+    libhardware_legacy.vendor \
+    libbinder.vendor \
+    libui.vendor \
+    android.hardware.configstore@1.0.vendor \
+    android.hardware.configstore-utils.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
+
+# VNDK-SP:
+PRODUCT_PACKAGES += \
+    vndk-sp
 
 # Face detection extension
 PRODUCT_PACKAGES += \
