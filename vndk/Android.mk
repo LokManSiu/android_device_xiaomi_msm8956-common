@@ -30,6 +30,9 @@ VNDK_SP_LIBRARIES := \
 EXTRA_VENDOR_LIBRARIES := \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
+    vendor.display.color@1.0 \
+    vendor.display.config@1.0 \
+    vendor.qti.hardware.iop@1.0 \
     libhardware_legacy \
     libbinder \
     libui \
@@ -79,6 +82,7 @@ $(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,vndk-sp,true)))
 $(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
     $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
+
 
 #-------------------------------------------------------------------------------
 # Phony Package
