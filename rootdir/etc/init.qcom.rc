@@ -238,6 +238,9 @@ on boot
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+	
+	# Use static wifi country code to fix 5Ghz Hotspot
+	setprop ro.boot.wificountrycode US
 
 on post-fs
     start qseecomd
